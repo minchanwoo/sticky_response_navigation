@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation</title>
+    <link rel='stylesheet' href="css/style.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class='logo'>Logo</a>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">TEAM</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </header>
+    <section class='banner'></section>
+    <!-- 스크롤이 안내려가서 스크롤이벤트발생하게 하려고 일부러 만들어놓은 div임 -->
+    <div style="margin:2000px">haha</div>
+    <script type='text/javascript'>
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
