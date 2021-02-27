@@ -25,7 +25,10 @@
     <script type='text/javascript'>
         window.addEventListener("scroll", function() {
             var header = document.querySelector("header");
+            // 스크롤Y축의 값이 0에서 아래로  내려가서 0보다 커지면 기존 헤더태그에
+            // 클래스 sticky를 추가한다
             header.classList.toggle("sticky", window.scrollY > 0);
+            console.log('HAHA~!!', scrollY)
         })
     </script>
 </body>
